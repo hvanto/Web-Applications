@@ -1,0 +1,54 @@
+.banner {
+    background-color: black;
+
+    &__logos {
+        overflow: hidden;
+        padding: 6vh 0 2vh 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+        background: black;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            z-index: 2;
+        }
+
+
+
+        &:hover &__slide {
+            animation-play-state: paused;
+        }
+
+        &__slide {
+            display: inline-block;
+            animation: 35s slide infinite linear;
+
+            img {
+                height: 50px;
+                margin: 0 40px;
+            }
+
+            span {
+                margin: 0 40px;
+                font-size: 6rem;
+                color: #38B6FF;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

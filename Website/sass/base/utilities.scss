@@ -1,0 +1,62 @@
+.black-bg {
+    background-image: url(../img/black-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.white-txt  {
+    color: white !important;
+}
+
+.lightblue-title {
+    color: #38B6FF !important;
+}
+
+.video-margin {
+    margin: 5vh 0 !important;
+}
+
+.title-margin {
+    margin: 10vh 0 7vh 0 !important;
+}
+
+.nav-bg {
+    background-color: #595959;
+}
+
+.col-10 {
+    flex-basis: 10%;
+
+}
+
+.col-40 {
+    flex-basis: 40%;
+    background-color: red;
+}
+
+// make 3 variations of display-box class, whereby the width is 15%, 20% and 25% respectively for different viewport sizes.
+
+// 15% width
+.display-box {
+    width: 20%;
+    margin: .5rem;
+    height: 12rem;
+    background-color: #595959;
+    border-radius: 1rem;
+}
+
+// 20% width
+@media (max-width: 1200px) {
+    .display-box {
+        width: 25%;
+    }
+}
+
+// 30% width
+@media (max-width: 750px) {
+    .display-box {
+        width: 30%;
+    }
+}

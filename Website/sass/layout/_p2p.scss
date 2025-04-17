@@ -1,0 +1,91 @@
+.p2p {
+    display: flex;
+    height: 90vh;
+    padding: 0 1%;
+    background-color: #595959;
+
+    &__create {
+        display: flex;
+        height: 90vh;
+        padding: 0 1%;
+        background-color: #595959;
+    }
+
+    &__col {
+        height: 100%;
+
+        ////////////////////////////////////
+        // Section to select either Create listing or view listing
+        &__option {
+            margin: 10rem 0 0 0;
+
+            &__title {
+                font-size: 3rem;
+                margin: 0 3rem;
+                font-weight: 600;
+                transition: .3s;
+                color: $color-tertiary;
+                margin-bottom: 2rem;
+            }
+        }
+
+        ///////////////////////////////
+        // Section to view users items
+        &__title {
+
+            &__text {
+                font-size: 4rem;
+                text-align: center;
+            }
+        }
+
+        &__trade {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+
+            &__search {
+                width: 80%;
+                height: 40px;
+                background-color: white;
+                border-radius: 10px;
+                margin-top: 20px;
+
+                &__text {
+                    font-size: 3rem;
+                }
+            }
+            &__items {
+                margin-top: 50px;
+                width: 100%;
+                flex-wrap: wrap;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        &__fa-icon {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &__icon {
+                color: #2883e4;
+                font-size: 5rem;
+            }
+        }
+    }
+
+
+
+
+    &__list {
+
+        &__section {
+            background-color: blue;
+        }
+    }
+}
+
