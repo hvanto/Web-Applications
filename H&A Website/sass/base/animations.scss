@@ -1,0 +1,45 @@
+////////////////////////////
+/// APPEAR ANIMATION
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+    filter: blur(5px);
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+@keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+from {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+

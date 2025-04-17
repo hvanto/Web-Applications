@@ -1,0 +1,134 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem 2rem;
+    background-color: $color-primary;
+
+    &__logo {
+        width: 160px;
+        height: auto;
+        margin-left: 10vw;
+    }
+
+    &__links {
+        display: flex;
+        overflow: hidden; /* Add overflow hidden to hide the content when not active */
+        margin-left: 5vw;
+        
+        &__link {
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            font-weight: 600;
+            transition: .3s;
+            
+            &:hover {
+                color: $color-tertiary;
+            }
+        }
+    }
+
+    &__btns {
+        text-decoration: none;
+        margin-right: 10vw;
+        display: flex;
+        
+        &__sign {
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 1.5rem 3rem;
+            transition: .3s;
+
+            &:hover {
+                color: $color-tertiary;
+            }
+        }
+
+        &__register {
+            font-size: 1.6rem;
+            margin: 0 2rem;
+            font-weight: 600;
+            background-color: #ff7322;
+            padding: 1.5rem 3rem;
+            border-radius: 4px;
+            color: #ffffff;
+            transition: .3s;
+
+            &:hover {
+                background-color: darken($color-tertiary, 20%);
+            }
+        }
+    }
+}
+
+#burgerMenu {
+    display: none;
+}
+
+// media query for when viewport less than 1000px
+
+@media only screen and (max-width: 1050px) {
+    .nav {
+        /* ... */
+
+        &__btns {
+            display: none;
+        }
+
+        &__burger {
+            margin-right: 5vw;
+            font-size: 2.5rem;
+        }
+
+        &__logo {
+            margin-left: 10vw;
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            background-color: $color-tertiary;
+            padding: 1rem 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0; /* Set initial width to 0 */
+            align-items: center;
+            transform: translateX(-100%); /* Slide the menu off-screen initially */
+            transition: width 1s ease-out, transform 1s ease-out; /* Add transition properties */
+            margin-left: 0;
+            height: 80vh;
+            padding-top: 23vh;
+            //Add .active
+            &.active {
+                width: 100vw; /* Set width to full viewport width */
+                transform: translateX(0); /* Slide the menu back in */
+            }
+
+            & li {
+                margin: 1rem 0;
+                color: white;
+            }
+
+            &__link {
+                font-size: 2rem;
+                color: white;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+        }
+        
+    }
+
+    #burgerMenu {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        cursor: pointer;
+        z-index: 999;
+    }
+}

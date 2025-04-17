@@ -1,0 +1,59 @@
+.banner {
+    height: 30vh;
+    background-color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh 0;
+
+    &__heading {
+        color: white;
+        text-align: center;
+    }
+
+    &__subheading {
+        color: #959595;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .banner {
+    
+        &__heading {
+            font-size: 4.5rem;
+        }
+    
+        &__subheading {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .banner {
+    
+        &__heading {
+            font-size: 5rem;
+        }
+    
+        &__subheading {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .banner {
+    
+        &__heading {
+            font-size: 3rem;
+        }
+    
+        &__subheading {
+            font-size: 1.3rem;
+        }
+    }
+}

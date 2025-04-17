@@ -1,0 +1,17 @@
+{
+  "name": "car-rental",
+  "version": "1.0.0",
+  "description": "RentIt Website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss -o css"
+  },
+  "author": "Henry van Toledo",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "car-rental": "file:"
+  }
+}

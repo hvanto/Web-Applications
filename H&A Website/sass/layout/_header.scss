@@ -1,0 +1,91 @@
+.header {
+    height: 100vh;
+    background-image: linear-gradient(to right bottom,
+    rgba(rgb(67, 172, 221), .8),
+    rgba(rgb(58, 46, 219), .8)),
+    url(../img/homepage-bg2.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    font-family: inherit;
+    
+
+    &__title {
+        color: white;
+        font-size: 5rem;
+        font-family: 'MetropolisRegular';
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 5rem;
+        animation: fadeDown 2s ease forwards;
+        animation-delay: .8s;
+        opacity: 0;
+    }
+
+    &__btn {
+        position: relative;
+        text-decoration: none;
+
+        font-size: 2rem;
+        height: 5rem;
+        font-family: 'MetropolisRegular';
+
+        padding: .5rem 1.5rem;
+        margin-top: 5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px;
+        
+        color: rgb(0, 0, 0);
+        border: 1px solid black;
+        background-color: rgb(112, 237, 253);
+        
+        opacity: 0;
+        animation: fadeUp 2s ease forwards;
+        animation-delay: .8s;
+        
+
+
+
+        &::before {
+            background: #ffffff;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+            width: 0%;
+            height: 100%;
+        }
+
+        &:hover::before {
+            width: 100%;
+        }       
+    }
+
+    &__btn-div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .header {
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__btn {
+            font-size: 1.2rem;
+            height: 3rem;
+        }
+    }
+}
+
+
+
